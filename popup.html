@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixShot</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .capture-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .capture-btn:hover {
+      background-color: #45a049;
+    }
+    .shortcut-info {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #888888;
+    }
+    .developer-widget {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888888;
+    }
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: medium;
+      text-decoration: none;
+      color: #e0e0e0;
+      background: linear-gradient(110deg, #000103, 45%, #1e2631, 55%, #000103);
+      background-size: 200% 100%;
+      border-radius: 5px;
+      border: 1px solid #2c2c2c;
+      transition: all 0.3s ease;
+      animation: background-shine 2s linear infinite;
+    }
+    .github-btn:hover {
+      opacity: 0.9;
+    }
+    .github-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    @keyframes background-shine {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -200% 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>PixShot</h1>
+  <p>Hızlı ve kullanışlı ekran görüntüsü alma eklentisi</p>
+  <button id="captureBtn" class="capture-btn">Ekran Görüntüsü Al</button>
+  <div class="shortcut-info">Kısayol: <span id="currentShortcut">Ctrl+Shift+S</span></div>
+  <div class="developer-widget">
+    <a href="https://github.com/netpixdev" target="_blank" class="github-btn">
+      <img src="github-icon.png" alt="GitHub" class="github-icon">
+      @netpixdev
+    </a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
